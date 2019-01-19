@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<application xmlns="http://ns.adobe.com/air/application/32.0">
+
+    <id>com.tuarua.SpotlightExample</id>
+
+    <!-- Used as the filename for the application. Required. -->
+    <filename>SpotlightExample</filename>
+
+    <!-- The name that is displayed in the AIR application installer. May have multiple values for each language. See samples or xsd schema file. Optional. -->
+    <name>SpotlightExample</name>
+
+    <versionNumber>1.0.0</versionNumber>
+
+    <extensions>
+        <extensionID>com.tuarua.SpotlightANE</extensionID>
+        <extensionID>com.tuarua.FreSwift</extensionID>
+    </extensions>
+
+    <!-- Settings for the application's initial window. Required. -->
+    <initialWindow>
+        <!-- The main SWF or HTML file of the application. Required. -->
+        <content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
+
+        <!-- Display Resolution for the app (either "standard" or "high"). Optional, OSX-only. Default "standard" -->
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+        <depthAndStencil>true</depthAndStencil>
+        <renderMode>direct</renderMode>
+        <autoOrients>false</autoOrients>
+        <fullScreen>false</fullScreen>
+        <visible>true</visible>
+    </initialWindow>
+
+
+</application>
