@@ -14,6 +14,7 @@
  */
 
 package com.tuarua.spotlight {
+/** Index errors returned by Core Spotlight.*/
 public class IndexError extends Error {
     /** The indexer was unavailable*/
     public static const indexUnavailableError:int = -1000;

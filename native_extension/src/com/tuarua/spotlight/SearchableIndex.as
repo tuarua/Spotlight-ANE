@@ -19,7 +19,7 @@ import com.tuarua.fre.ANEError;
 
 import flash.events.EventDispatcher;
 import flash.system.Capabilities;
-
+/** The on-device index.*/
 public class SearchableIndex extends EventDispatcher {
     private var id:String;
     private static const platform:String = Capabilities.version.substr(0, 3).toLowerCase();
@@ -48,8 +48,8 @@ public class SearchableIndex extends EventDispatcher {
     }
 
     /** Call this method on the index to remove any items from the index with the given identifiers or domain identifiers.
-     * The delete is recursive so if domain identifiers are of the form <account-id>.<mailbox-id>, for example,
-     * calling delete with <account-id> will delte all the searchable items with that account and any mailbox. */
+     * The delete is recursive so if domain identifiers are of the form account-id.mailbox-id, for example,
+     * calling delete with account-id will delte all the searchable items with that account and any mailbox. */
     public function deleteSearchableItems(identifiers:Vector.<String> = null, domainIdentifiers:Vector.<String> = null,
                                           completionHandler:Function = null):void {
         if (identifiers == null && domainIdentifiers == null) {

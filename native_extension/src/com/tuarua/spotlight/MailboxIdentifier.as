@@ -14,6 +14,7 @@
  */
 
 package com.tuarua.spotlight {
+/** Constants that describe common mailbox names.*/
 public final class MailboxIdentifier {
     /** An inbox.*/
     public static const inbox:String = "mailbox.inbox";

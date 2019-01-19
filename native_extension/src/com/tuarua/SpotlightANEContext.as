@@ -56,7 +56,7 @@ public class SpotlightANEContext {
 
     public static function createEventId(listener:Function, listenerCaller:Object = null):String {
         var eventId:String;
-        if (listener) {
+        if (listener != null) {
             eventId = context.call("createGUID") as String;
             closures[eventId] = listener;
             if (listenerCaller) {

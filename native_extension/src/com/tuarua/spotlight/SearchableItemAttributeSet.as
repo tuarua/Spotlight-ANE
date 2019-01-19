@@ -18,7 +18,7 @@ import com.tuarua.SpotlightANEContext;
 import com.tuarua.fre.ANEError;
 
 import flash.display.BitmapData;
-
+/** The set of properties to display for a searchable item. */
 public class SearchableItemAttributeSet {
     /** @private */
     public var itemId:String;
@@ -37,10 +37,10 @@ public class SearchableItemAttributeSet {
     /** This is the complete path to the item. */
     public var path:String;
 
-    /** Optional file URL representing the content to be indexed
-     * Applications that are also 'Documents & Data' clients can set this property to allow Spotlight to deduplicate
+    /** Optional file URL representing the content to be indexed.
+     * <p>Applications that are also 'Documents &amp; Data' clients can set this property to allow Spotlight to deduplicate
      * their searchable items against the iCloud Drive's items. When this property is set, Spotlight will not display
-     * the iCloud Drive's searchable items that have the same contentURL property. */
+     * the iCloud Drive's searchable items that have the same contentURL property.</p> */
     public var contentURL:String;
 
     /** Optional file URL pointing to a thumbnail image for this item */
@@ -77,35 +77,35 @@ public class SearchableItemAttributeSet {
     /** A version specifier for this item. */
     public var version:String;
 
-    /** This property is used to indicate if the indexed item was created by the user
-     * It is used to distinguish pushed app content from content that required explicit user interaction
-     * Example content that may set this field: user created notes, documents
-     * @available(iOS 11.0, *) */
+    /** This property is used to indicate if the indexed item was created by the user.
+     * <p>It is used to distinguish pushed app content from content that required explicit user interaction
+     * Example content that may set this field: user created notes, documents</p>
+     * iOS 11.0+ */
     public var userCreated:Boolean;
 
     /** This property is used to indicate if the indexed item has been purchased or otherwise acquired by the user
      * Example content are songs bought by a user and made searchable
-     * @available(iOS 11.0, *) */
+     * iOS 11.0+ */
     public var userOwned:Boolean;
 
     /** This property is used to indicate if the indexed item was selected by the user
-     * It is used to distinguish pushed app content from content that a user has chosen to add to a collection
-     * Example content that may set this field: downloaded media content, bookmarked websites/news articles
-     * @available(iOS 11.0, *) */
+     * <p>It is used to distinguish pushed app content from content that a user has chosen to add to a collection
+     * Example content that may set this field: downloaded media content, bookmarked websites/news articles</p>
+     * iOS 11.0+ */
     public var userCurated:Boolean;
 
     /** This property allows content donors to provide a ranking signal to each indexed item
-     * It will inform the ranker, allowing it to distinguish more easily between otherwise similar items
-     * This is query-independent and should be used to indicate the relative importance of an item w.r.t. all other items for the same application
-     * Expected value ∈ [0-100]; preferably integral values
-     * Monotonically increasing with larger values being considered better results
-     * @available(iOS 11.0, *) */
+     * <p>It will inform the ranker, allowing it to distinguish more easily between otherwise similar items
+     * This is query-independent and should be used to indicate the relative importance of an item w.r.t. all other items for the same application</p>
+     * <p>Expected value [0-100]; preferably integral values</p>
+     * <p>Monotonically increasing with larger values being considered better results</p>
+     * iOS 11.0+ */
     public var rankingHint:Number = -1;
 
     /** This property has the same semantics as -[CSSearchableItem domainIdentifier].
-     * It can be set on the contentAttributeSet property of a NSUserActivity instance and then used to delete the user activity
-     * by calling [[SearchableIndex defaultSearchableIndex] deleteSearchableItemsWithDomainIdentifiers:].
-     * @available(iOS 10.0, *) */
+     * <p>It can be set on the contentAttributeSet property of a NSUserActivity instance and then used to delete the user activity
+     * by calling [[SearchableIndex defaultSearchableIndex] deleteSearchableItemsWithDomainIdentifiers:].</p>
+     * iOS 11.0+ */
     public var domainIdentifier:String;
 
     /** @private */
@@ -211,13 +211,13 @@ public class SearchableItemAttributeSet {
      * depth per audio sample of uncompressed audio data (8, 16, 24, 32, 64, etc..) */
     public var bitsPerSample:Number = -1;
 
-    /** Indicates if the flash was used to take the picture.  Should be true if flash is on, false otherwise. */
+    /** Indicates if the flash was used to take the picture. Should be true if flash is on, false otherwise. */
     public var flashOn:Boolean;
 
     /** The actual focal length of the lens in mm. */
     public var focalLength:Number = -1;
 
-    /** Indicates if the focal length is 35mm.  Should be 1 if true, 0 otherwise */
+    /** Indicates if the focal length is 35mm. Should be 1 if true, 0 otherwise */
     public var focalLength35mm:Number = -1;
 
     /** Device make that was used to acquire this item */
@@ -302,8 +302,8 @@ public class SearchableItemAttributeSet {
     public var participants:Vector.<String>;
 
     /** The list of projects that this item is part of.
-     * For example if you were working on a movie, all of the movie files could be marked
-     * as belonging to the project "My movie"*/
+     * <p>For example if you were working on a movie, all of the movie files could be marked
+     * as belonging to the project "My movie" </p>*/
     public var projects:Vector.<String>;
 
     /** This is the date that the file was last downloaded / received.*/
@@ -348,7 +348,7 @@ public class SearchableItemAttributeSet {
     /** Whether the content is prepared for streaming.  Should be 0 for not streamable, 1 for streamable.*/
     public var streamable:Boolean;
 
-    /** The total bit rate (audio & video combined) of the media*/
+    /** The total bit rate (audio &amp; video combined) of the media*/
     public var totalBitRate:Number = -1;
 
     /** The video bit rate*/
@@ -393,12 +393,12 @@ public class SearchableItemAttributeSet {
      * Contributor should be used to indicate the entity.*/
     public var contributors:Vector.<String>;
 
-    /** Used to designate the extent or scope of the content of the
+    /** <p>Used to designate the extent or scope of the content of the
      * resource. Coverage will typically include spatial location
      * (a place name or geographic co-ordinates), temporal period (a period label, date, or date range)
-     * or jurisdiction (such as a named administrative entity).
-     * Recommended best practice is to select a value from a controlled vocabulary, and that, where appropriate,
-     * named places or time periods be used in preference to numeric identifiers such as sets of co-ordinates or date ranges.*/
+     * or jurisdiction (such as a named administrative entity).</p>
+     * <p>Recommended best practice is to select a value from a controlled vocabulary, and that, where appropriate,
+     * named places or time periods be used in preference to numeric identifiers such as sets of co-ordinates or date ranges.</p>*/
     public var coverage:Vector.<String>;
 
     /** User rating of this item out of 5 stars*/

@@ -14,6 +14,7 @@
  */
 
 package com.tuarua.spotlight {
+/** An object representing a person in the context of search results. */
 public class Person {
     private var _displayName:String;
     private var _handles:Vector.<String>;

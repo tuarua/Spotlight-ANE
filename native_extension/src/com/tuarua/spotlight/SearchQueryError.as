@@ -14,6 +14,7 @@
  */
 
 package com.tuarua.spotlight {
+/** Search query errors returned by Core Spotlight.*/
 public class SearchQueryError extends Error {
     /** An unknown error occurred. */
     public static const unknown:int = -2000;
