@@ -21,11 +21,36 @@ import MobileCoreServices
 #else
 #endif
 
+public extension FreObjectSwift {
+    public subscript(dynamicMember name: String) -> [String]? {
+        get { return [String](rawValue?[name]) }
+        set { rawValue?[name] = newValue?.toFREObject() }
+    }
+    public subscript(dynamicMember name: String) -> [Date]? {
+        get {
+            guard let rv = rawValue?[name] else { return nil }
+            var ret = [Date]()
+            for v in FREArray(rv) {
+                if let dte = Date(v) {
+                    ret.append(dte)
+                }
+            }
+            return ret
+        }
+        set {
+            let freArray = FREArray(className: "Date")
+            for v in newValue ?? [] {
+                freArray?.push(v.toFREObject())
+            }
+            rawValue?[name] = freArray?.rawValue
+        }
+    }
+}
+
 public extension CSSearchableItemAttributeSet {
     func toFREObject(itemId: String) -> FREObject? {
         guard let fre = FreObjectSwift(className: "com.tuarua.spotlight.SearchableItemAttributeSet",
                                        args: self.contentType) else { return nil }
-        
         fre.itemId = itemId
         if let title = self.title {
             fre.title = title

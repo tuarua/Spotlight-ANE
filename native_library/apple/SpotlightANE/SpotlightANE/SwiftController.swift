@@ -57,7 +57,7 @@ public class SwiftController: NSObject {
             else {
                 return FreArgError(message: "indexSearchableItems").getError(#file, #line, #column)
         }
-        
+
         let eventId = String(argv[2])
         
         index.indexSearchableItems(items) { error in

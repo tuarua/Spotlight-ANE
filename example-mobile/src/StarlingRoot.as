@@ -78,6 +78,8 @@ public class StarlingRoot extends Sprite {
             attributeSet.contentDescription = "This is a starry document";
             attributeSet.keywords = new <String>["example", "beer"];
             attributeSet.thumbnailURL = File.applicationDirectory.resolvePath("docs-icon.png").nativePath;
+            attributeSet.importantDates = new Vector.<Date>();
+            attributeSet.importantDates.push(new Date());
 
             var item:SearchableItem = new SearchableItem("starlightDoc", "com.tuarua", attributeSet);
             index = new SearchableIndex();
