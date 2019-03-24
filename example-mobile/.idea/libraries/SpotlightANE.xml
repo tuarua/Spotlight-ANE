@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SpotlightANE" type="flex">
+    <CLASSES>
+      <root url="jar://$DOCUMENTS$/Spotlight-ANE/native_extension/ane/SpotlightANE.ane!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="https://tuarua.github.io/asdocs/spotlightane/index.html" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
