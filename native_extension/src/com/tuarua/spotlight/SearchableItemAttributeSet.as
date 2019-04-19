@@ -14,8 +14,6 @@
  */
 
 package com.tuarua.spotlight {
-import com.tuarua.SpotlightANEContext;
-import com.tuarua.fre.ANEError;
 
 import flash.display.BitmapData;
 /** The set of properties to display for a searchable item. */
