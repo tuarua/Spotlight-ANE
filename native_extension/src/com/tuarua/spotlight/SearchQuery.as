@@ -37,7 +37,7 @@ public class SearchQuery {
     /** Asynchronously queries the index for items that match the query object’s specifications. */
     public function start(completionHandler:Function):void {
         var ret:* = SpotlightANEContext.context.call("startQuery", id,
-                SpotlightANEContext.createEventId(completionHandler));
+                SpotlightANEContext.createCallback(completionHandler));
         if (ret is ANEError) throw ret as ANEError;
     }
 

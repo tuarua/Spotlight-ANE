@@ -43,33 +43,17 @@ public extension CSPerson {
 
 public extension Array where Element == CSPerson {
     init?(_ freObject: FREObject?) {
-        self.init()
-        guard let rv = freObject else {
-            return
-        }
-        var ret = [CSPerson]()
-        let array = FREArray(rv)
-        for item in array {
-            if let v = CSPerson(item) {
-                ret.append(v)
-            }
-        }
-        self = ret
+        guard let rv = freObject else { return nil }
+        self = FREArray(rv).compactMap { CSPerson($0) }
     }
     func toFREObject() -> FREObject? {
-        guard let ret = FREArray(className: "com.tuarua.spotlight.Person",
-                                 length: self.count, fixed: true) else { return nil }
-        var cnt: UInt = 0
-        for item in self {
-            ret[cnt] = item.toFREObject()
-            cnt += 1
-        }
-        return ret.rawValue
+        return FREArray(className: "com.tuarua.spotlight.Person",
+            length: self.count, fixed: true, items: self.compactMap { $0.toFREObject() })?.rawValue
     }
 }
 
 public extension FreObjectSwift {
-    public subscript(dynamicMember name: String) -> [CSPerson]? {
+    subscript(dynamicMember name: String) -> [CSPerson]? {
         get { return [CSPerson](rawValue?[name]) }
         set { rawValue?[name] = newValue?.toFREObject() }
     }

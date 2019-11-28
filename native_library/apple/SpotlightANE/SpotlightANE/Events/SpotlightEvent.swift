@@ -25,33 +25,33 @@ class SpotlightEvent: NSObject {
     public static let queryComplete = "SpotlightEvent.QueryComplete"
     
     var id: String?
-    var eventId: String?
+    var callbackId: String?
     var error: CSIndexError?
     var error2: CSSearchQueryError?
     
-    convenience init(eventId: String?, id: String?) {
+    convenience init(callbackId: String?, id: String?) {
         self.init()
         self.id = id
-        self.eventId = eventId
+        self.callbackId = callbackId
     }
     
-    convenience init(eventId: String?, id: String?, error: CSIndexError) {
+    convenience init(callbackId: String?, id: String?, error: CSIndexError) {
         self.init()
-        self.eventId = eventId
+        self.callbackId = callbackId
         self.id = id
         self.error = error
     }
     
-    convenience init(eventId: String?, id: String?, error: CSSearchQueryError) {
+    convenience init(callbackId: String?, id: String?, error: CSSearchQueryError) {
         self.init()
         self.id = id
-        self.eventId = eventId
+        self.callbackId = callbackId
         self.error2 = error
     }
     
     public func toJSONString() -> String {
         var props = [String: Any]()
-        props["eventId"] = eventId
+        props["callbackId"] = callbackId
         props["id"] = id
         if let error = error {
             props["error"] = error.toDictionary()

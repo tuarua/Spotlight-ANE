@@ -3,31 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		902F5D4B21EBC63800F1E8EF /* CSSearchQueryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */; };
+		902F5D4B21EBC63800F1E8EF /* CSSearchQueryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */; platformFilter = ios; };
 		902F5D4C21EBC63800F1E8EF /* CSSearchQueryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */; };
-		90B7C4EF21E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; };
+		90B7C4EF21E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; platformFilter = ios; };
 		90B7C4F021E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; };
 		90CB78AE21E8F54A0038F4D9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78AD21E8F54A0038F4D9 /* CoreSpotlight.framework */; };
-		90CB78B021E8F58A0038F4D9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78AF21E8F58A0038F4D9 /* CoreSpotlight.framework */; };
-		90CB78B221E8F5910038F4D9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78B121E8F5910038F4D9 /* MobileCoreServices.framework */; };
-		90CB78B421E903A20038F4D9 /* CSIndexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B321E903A20038F4D9 /* CSIndexError.swift */; };
+		90CB78B021E8F58A0038F4D9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78AF21E8F58A0038F4D9 /* CoreSpotlight.framework */; platformFilter = ios; };
+		90CB78B221E8F5910038F4D9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78B121E8F5910038F4D9 /* MobileCoreServices.framework */; platformFilter = ios; };
+		90CB78B421E903A20038F4D9 /* CSIndexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B321E903A20038F4D9 /* CSIndexError.swift */; platformFilter = ios; };
 		90CB78B521E903A20038F4D9 /* CSIndexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B321E903A20038F4D9 /* CSIndexError.swift */; };
-		90CB78B721E906100038F4D9 /* SpotlightEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B621E906100038F4D9 /* SpotlightEvent.swift */; };
+		90CB78B721E906100038F4D9 /* SpotlightEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B621E906100038F4D9 /* SpotlightEvent.swift */; platformFilter = ios; };
 		90CB78B821E906100038F4D9 /* SpotlightEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B621E906100038F4D9 /* SpotlightEvent.swift */; };
 		90CC24CC21274ED0000CE135 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CC24CB21274ED0000CE135 /* Cocoa.framework */; };
-		90D0D2A121E4028400A59861 /* FreCSSearchableItemAttributeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A021E4028400A59861 /* FreCSSearchableItemAttributeSet.swift */; };
+		90D0D2A121E4028400A59861 /* FreCSSearchableItemAttributeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A021E4028400A59861 /* FreCSSearchableItemAttributeSet.swift */; platformFilter = ios; };
 		90D0D2A221E4028400A59861 /* FreCSSearchableItemAttributeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A021E4028400A59861 /* FreCSSearchableItemAttributeSet.swift */; };
-		90D0D2A721E423BA00A59861 /* FreCSPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A621E423BA00A59861 /* FreCSPerson.swift */; };
+		90D0D2A721E423BA00A59861 /* FreCSPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A621E423BA00A59861 /* FreCSPerson.swift */; platformFilter = ios; };
 		90D0D2A821E423BA00A59861 /* FreCSPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A621E423BA00A59861 /* FreCSPerson.swift */; };
-		CE05603F1FB25CE200D06976 /* FreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE05603E1FB25CE200D06976 /* FreSwift.framework */; };
-		CE0560401FB25CE200D06976 /* FreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE05603E1FB25CE200D06976 /* FreSwift.framework */; };
-		CE0560451FB25DD000D06976 /* SpotlightANE_FW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE87F4831FB259FA005CF7DF /* SpotlightANE_FW.framework */; };
-		CE05604E1FB25E8E00D06976 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; };
-		CE05604F1FB25E9F00D06976 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; };
+		CE05603F1FB25CE200D06976 /* FreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE05603E1FB25CE200D06976 /* FreSwift.framework */; platformFilter = ios; };
+		CE0560401FB25CE200D06976 /* FreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE05603E1FB25CE200D06976 /* FreSwift.framework */; platformFilter = ios; };
+		CE0560451FB25DD000D06976 /* SpotlightANE_FW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE87F4831FB259FA005CF7DF /* SpotlightANE_FW.framework */; platformFilter = ios; };
+		CE05604E1FB25E8E00D06976 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; platformFilter = ios; };
+		CE05604F1FB25E9F00D06976 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; platformFilter = ios; };
 		CE6DC5AE20542E3100E20217 /* SwiftyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103F203889A1004FD8B4 /* SwiftyJSON.h */; };
 		CE6DC5AF20542E3800E20217 /* SpotlightANE_oc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103A20388975004FD8B4 /* SpotlightANE_oc.h */; };
 		CE6DC5B020542E3B00E20217 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; };
@@ -39,14 +39,14 @@
 		CE6DC5BF20542EC400E20217 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88103E203889A1004FD8B4 /* SwiftyJSON.swift */; };
 		CE6DC5C020542EC800E20217 /* SwiftController+FreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104D203889B7004FD8B4 /* SwiftController+FreSwift.swift */; };
 		CE6DC5C520542F0000E20217 /* FreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6DC5C420542F0000E20217 /* FreSwift.framework */; };
-		CE87F4871FB259FA005CF7DF /* SpotlightANE_FW.h in Headers */ = {isa = PBXBuildFile; fileRef = CE87F4851FB259FA005CF7DF /* SpotlightANE_FW.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE88103B20388976004FD8B4 /* SpotlightANE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE88103920388975004FD8B4 /* SpotlightANE.m */; };
-		CE88103C20388976004FD8B4 /* SpotlightANE_oc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103A20388975004FD8B4 /* SpotlightANE_oc.h */; };
-		CE881040203889A2004FD8B4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88103E203889A1004FD8B4 /* SwiftyJSON.swift */; };
-		CE881041203889A2004FD8B4 /* SwiftyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103F203889A1004FD8B4 /* SwiftyJSON.h */; };
-		CE881056203889B7004FD8B4 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881049203889B6004FD8B4 /* URL.swift */; };
-		CE881059203889B7004FD8B4 /* SwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104C203889B6004FD8B4 /* SwiftController.swift */; };
-		CE88105A203889B7004FD8B4 /* SwiftController+FreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104D203889B7004FD8B4 /* SwiftController+FreSwift.swift */; };
+		CE87F4871FB259FA005CF7DF /* SpotlightANE_FW.h in Headers */ = {isa = PBXBuildFile; fileRef = CE87F4851FB259FA005CF7DF /* SpotlightANE_FW.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		CE88103B20388976004FD8B4 /* SpotlightANE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE88103920388975004FD8B4 /* SpotlightANE.m */; platformFilter = ios; };
+		CE88103C20388976004FD8B4 /* SpotlightANE_oc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103A20388975004FD8B4 /* SpotlightANE_oc.h */; platformFilter = ios; };
+		CE881040203889A2004FD8B4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88103E203889A1004FD8B4 /* SwiftyJSON.swift */; platformFilter = ios; };
+		CE881041203889A2004FD8B4 /* SwiftyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103F203889A1004FD8B4 /* SwiftyJSON.h */; platformFilter = ios; };
+		CE881056203889B7004FD8B4 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881049203889B6004FD8B4 /* URL.swift */; platformFilter = ios; };
+		CE881059203889B7004FD8B4 /* SwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104C203889B6004FD8B4 /* SwiftController.swift */; platformFilter = ios; };
+		CE88105A203889B7004FD8B4 /* SwiftController+FreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104D203889B7004FD8B4 /* SwiftController+FreSwift.swift */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,7 +322,7 @@
 		CE87F45D1FB259C9005CF7DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Tua Rua Ltd";
 				TargetAttributes = {
 					CE6DC5A520542D5600E20217 = {
@@ -344,10 +344,11 @@
 			};
 			buildConfigurationList = CE87F4601FB259C9005CF7DF /* Build configuration list for PBXProject "SpotlightANE" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CE87F45C1FB259C9005CF7DF;
 			productRefGroup = CE87F4661FB259C9005CF7DF /* Products */;
@@ -465,6 +466,7 @@
 /* Begin PBXTargetDependency section */
 		CE0560471FB25DD600D06976 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = CE87F4821FB259FA005CF7DF /* SpotlightANE_FW (iOS) */;
 			targetProxy = CE0560461FB25DD600D06976 /* PBXContainerItemProxy */;
 		};
@@ -481,7 +483,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -514,7 +516,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -530,7 +532,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -563,7 +565,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -573,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -624,6 +627,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -631,6 +635,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -677,6 +682,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -766,15 +772,17 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuarua.SpotlightANE;
 				PRODUCT_NAME = SpotlightANE_FW;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -809,15 +817,17 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuarua.SpotlightANE;
 				PRODUCT_NAME = SpotlightANE_FW;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
