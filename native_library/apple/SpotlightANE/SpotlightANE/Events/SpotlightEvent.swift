@@ -16,6 +16,7 @@
 
 import Foundation
 import CoreSpotlight
+import SwiftyJSON
 
 class SpotlightEvent: NSObject {
     public static let index = "SpotlightEvent.Index"

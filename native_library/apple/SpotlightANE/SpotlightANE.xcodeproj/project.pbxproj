@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		902F5D4B21EBC63800F1E8EF /* CSSearchQueryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */; platformFilter = ios; };
 		902F5D4C21EBC63800F1E8EF /* CSSearchQueryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */; };
+		90382C3F2396CED700A2F89D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 90382C3E2396CED700A2F89D /* SwiftyJSON */; };
+		90382C412396D13900A2F89D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 90382C402396D13900A2F89D /* SwiftyJSON */; };
 		90B7C4EF21E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; platformFilter = ios; };
 		90B7C4F021E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; };
 		90CB78AE21E8F54A0038F4D9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78AD21E8F54A0038F4D9 /* CoreSpotlight.framework */; };
@@ -28,7 +30,6 @@
 		CE0560451FB25DD000D06976 /* SpotlightANE_FW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE87F4831FB259FA005CF7DF /* SpotlightANE_FW.framework */; platformFilter = ios; };
 		CE05604E1FB25E8E00D06976 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; platformFilter = ios; };
 		CE05604F1FB25E9F00D06976 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; platformFilter = ios; };
-		CE6DC5AE20542E3100E20217 /* SwiftyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103F203889A1004FD8B4 /* SwiftyJSON.h */; };
 		CE6DC5AF20542E3800E20217 /* SpotlightANE_oc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103A20388975004FD8B4 /* SpotlightANE_oc.h */; };
 		CE6DC5B020542E3B00E20217 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; };
 		CE6DC5B420542E7800E20217 /* Adobe AIR_64 in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6DC5A020542D2800E20217 /* Adobe AIR_64 */; };
@@ -36,14 +37,11 @@
 		CE6DC5B920542EA200E20217 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881049203889B6004FD8B4 /* URL.swift */; };
 		CE6DC5BA20542EAA00E20217 /* SpotlightANE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE88103920388975004FD8B4 /* SpotlightANE.m */; };
 		CE6DC5BE20542EBD00E20217 /* SwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104C203889B6004FD8B4 /* SwiftController.swift */; };
-		CE6DC5BF20542EC400E20217 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88103E203889A1004FD8B4 /* SwiftyJSON.swift */; };
 		CE6DC5C020542EC800E20217 /* SwiftController+FreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104D203889B7004FD8B4 /* SwiftController+FreSwift.swift */; };
 		CE6DC5C520542F0000E20217 /* FreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6DC5C420542F0000E20217 /* FreSwift.framework */; };
 		CE87F4871FB259FA005CF7DF /* SpotlightANE_FW.h in Headers */ = {isa = PBXBuildFile; fileRef = CE87F4851FB259FA005CF7DF /* SpotlightANE_FW.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		CE88103B20388976004FD8B4 /* SpotlightANE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE88103920388975004FD8B4 /* SpotlightANE.m */; platformFilter = ios; };
 		CE88103C20388976004FD8B4 /* SpotlightANE_oc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103A20388975004FD8B4 /* SpotlightANE_oc.h */; platformFilter = ios; };
-		CE881040203889A2004FD8B4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88103E203889A1004FD8B4 /* SwiftyJSON.swift */; platformFilter = ios; };
-		CE881041203889A2004FD8B4 /* SwiftyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CE88103F203889A1004FD8B4 /* SwiftyJSON.h */; platformFilter = ios; };
 		CE881056203889B7004FD8B4 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881049203889B6004FD8B4 /* URL.swift */; platformFilter = ios; };
 		CE881059203889B7004FD8B4 /* SwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104C203889B6004FD8B4 /* SwiftController.swift */; platformFilter = ios; };
 		CE88105A203889B7004FD8B4 /* SwiftController+FreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88104D203889B7004FD8B4 /* SwiftController+FreSwift.swift */; platformFilter = ios; };
@@ -84,8 +82,6 @@
 		CE8810382038888D004FD8B4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		CE88103920388975004FD8B4 /* SpotlightANE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightANE.m; sourceTree = "<group>"; };
 		CE88103A20388975004FD8B4 /* SpotlightANE_oc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightANE_oc.h; sourceTree = "<group>"; };
-		CE88103E203889A1004FD8B4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		CE88103F203889A1004FD8B4 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		CE881049203889B6004FD8B4 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		CE88104C203889B6004FD8B4 /* SwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftController.swift; sourceTree = "<group>"; };
 		CE88104D203889B7004FD8B4 /* SwiftController+FreSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftController+FreSwift.swift"; sourceTree = "<group>"; };
@@ -96,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90382C3F2396CED700A2F89D /* SwiftyJSON in Frameworks */,
 				90CB78AE21E8F54A0038F4D9 /* CoreSpotlight.framework in Frameworks */,
 				90CC24CC21274ED0000CE135 /* Cocoa.framework in Frameworks */,
 				CE6DC5B420542E7800E20217 /* Adobe AIR_64 in Frameworks */,
@@ -119,6 +116,7 @@
 			files = (
 				90CB78B221E8F5910038F4D9 /* MobileCoreServices.framework in Frameworks */,
 				90CB78B021E8F58A0038F4D9 /* CoreSpotlight.framework in Frameworks */,
+				90382C412396D13900A2F89D /* SwiftyJSON in Frameworks */,
 				CE0560401FB25CE200D06976 /* FreSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,21 +185,11 @@
 				CE881044203889B6004FD8B4 /* Extensions */,
 				CE88104C203889B6004FD8B4 /* SwiftController.swift */,
 				CE88104D203889B7004FD8B4 /* SwiftController+FreSwift.swift */,
-				CE88103D203889A1004FD8B4 /* SwiftyJSON */,
 				CE6DC59D20542B9A00E20217 /* Headers */,
 				CE6DC59E20542BA500E20217 /* Misc */,
 				CE88103920388975004FD8B4 /* SpotlightANE.m */,
 			);
 			path = SpotlightANE;
-			sourceTree = "<group>";
-		};
-		CE88103D203889A1004FD8B4 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				CE88103E203889A1004FD8B4 /* SwiftyJSON.swift */,
-				CE88103F203889A1004FD8B4 /* SwiftyJSON.h */,
-			);
-			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 		CE881044203889B6004FD8B4 /* Extensions */ = {
@@ -241,7 +229,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6DC5AE20542E3100E20217 /* SwiftyJSON.h in Headers */,
 				CE6DC5B020542E3B00E20217 /* FreMacros.h in Headers */,
 				CE6DC5AF20542E3800E20217 /* SpotlightANE_oc.h in Headers */,
 			);
@@ -251,7 +238,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE881041203889A2004FD8B4 /* SwiftyJSON.h in Headers */,
 				CE87F4871FB259FA005CF7DF /* SpotlightANE_FW.h in Headers */,
 				CE05604F1FB25E9F00D06976 /* FreMacros.h in Headers */,
 			);
@@ -275,6 +261,9 @@
 			dependencies = (
 			);
 			name = "SpotlightANE (OSX)";
+			packageProductDependencies = (
+				90382C3E2396CED700A2F89D /* SwiftyJSON */,
+			);
 			productName = MLANE;
 			productReference = CE6DC5A620542D5600E20217 /* SpotlightANE.framework */;
 			productType = "com.apple.product-type.framework";
@@ -312,6 +301,9 @@
 			dependencies = (
 			);
 			name = "SpotlightANE_FW (iOS)";
+			packageProductDependencies = (
+				90382C402396D13900A2F89D /* SwiftyJSON */,
+			);
 			productName = HelloWorldANE_FW;
 			productReference = CE87F4831FB259FA005CF7DF /* SpotlightANE_FW.framework */;
 			productType = "com.apple.product-type.framework";
@@ -351,6 +343,9 @@
 				Base,
 			);
 			mainGroup = CE87F45C1FB259C9005CF7DF;
+			packageReferences = (
+				90382C3D2396CED700A2F89D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = CE87F4661FB259C9005CF7DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -432,7 +427,6 @@
 				CE6DC5C020542EC800E20217 /* SwiftController+FreSwift.swift in Sources */,
 				90D0D2A821E423BA00A59861 /* FreCSPerson.swift in Sources */,
 				90B7C4F021E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */,
-				CE6DC5BF20542EC400E20217 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +451,6 @@
 				90D0D2A721E423BA00A59861 /* FreCSPerson.swift in Sources */,
 				90CB78B721E906100038F4D9 /* SpotlightEvent.swift in Sources */,
 				90CB78B421E903A20038F4D9 /* CSIndexError.swift in Sources */,
-				CE881040203889A2004FD8B4 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,6 +867,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90382C3D2396CED700A2F89D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90382C3E2396CED700A2F89D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90382C3D2396CED700A2F89D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		90382C402396D13900A2F89D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90382C3D2396CED700A2F89D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE87F45D1FB259C9005CF7DF /* Project object */;
 }
