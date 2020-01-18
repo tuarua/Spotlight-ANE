@@ -246,9 +246,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CE6DC5A520542D5600E20217 /* SpotlightANE (OSX) */ = {
+		CE6DC5A520542D5600E20217 /* SpotlightANE (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE6DC5AB20542D5600E20217 /* Build configuration list for PBXNativeTarget "SpotlightANE (OSX)" */;
+			buildConfigurationList = CE6DC5AB20542D5600E20217 /* Build configuration list for PBXNativeTarget "SpotlightANE (macOS)" */;
 			buildPhases = (
 				CE6DC5A120542D5600E20217 /* Sources */,
 				CE6DC5A220542D5600E20217 /* Frameworks */,
@@ -260,7 +260,7 @@
 			);
 			dependencies = (
 			);
-			name = "SpotlightANE (OSX)";
+			name = "SpotlightANE (macOS)";
 			packageProductDependencies = (
 				90382C3E2396CED700A2F89D /* SwiftyJSON */,
 			);
@@ -352,7 +352,7 @@
 			targets = (
 				CE87F4741FB259DB005CF7DF /* SpotlightANE_LIB (iOS) */,
 				CE87F4821FB259FA005CF7DF /* SpotlightANE_FW (iOS) */,
-				CE6DC5A520542D5600E20217 /* SpotlightANE (OSX) */,
+				CE6DC5A520542D5600E20217 /* SpotlightANE (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -373,14 +373,14 @@
 		};
 		CE6DC5C72054339500E20217 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "../../../native_extension/ane/build.sh\n";
 		};
@@ -830,7 +830,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE6DC5AB20542D5600E20217 /* Build configuration list for PBXNativeTarget "SpotlightANE (OSX)" */ = {
+		CE6DC5AB20542D5600E20217 /* Build configuration list for PBXNativeTarget "SpotlightANE (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE6DC5AC20542D5600E20217 /* Debug */,

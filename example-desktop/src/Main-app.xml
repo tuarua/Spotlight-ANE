@@ -9,7 +9,7 @@
     <!-- The name that is displayed in the AIR application installer. May have multiple values for each language. See samples or xsd schema file. Optional. -->
     <name>SpotlightExample</name>
 
-    <versionNumber>1.0.0</versionNumber>
+    <versionNumber>1.2.0</versionNumber>
 
     <extensions>
         <extensionID>com.tuarua.SpotlightANE</extensionID>
