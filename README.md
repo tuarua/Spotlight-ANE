@@ -42,65 +42,7 @@ bash get_dependencies.sh
 
 As per iOS above.
 
-### Building the App
 
-CoreSpotLight requires you to build a captive runtime release (.app) and then make some modifications.
-
-#### Remove some AIR files
-
-Remove the following files/folders from _Main.app/_
-
-- Contents/Frameworks/Adobe AIR.framework/Versions/1.0/Resources/__MACOSX/
-- Contents/Frameworks/Adobe AIR.framework/Versions/1.0/Resources/WebKit.dylib
-- Contents/Frameworks/Adobe AIR.framework/Versions/1.0/Resources/WebKit/
-- Contents/Frameworks/Adobe AIR.framework/Versions/1.0/Resources/Flash Player.plugin
-- Contents/Frameworks/Adobe AIR.framework/Versions/1.0/Resources/Adobe AIR.vch
-
-#### Update Info.plist
-
-Add the following entries to _Contents/Info.plist_
-
-```xml
-<key>CFBundleVersion</key>
-<string>1.0.0</string>
-<key>CFBundleIconFile</key>
-<string>AppIcon</string>
-<key>CFBundleIconName</key>
-<string>AppIcon</string>
-```
-
-#### Update Entitlements
-
-Open _bin-release/Entitlements.entitlements_ and update the 2 **XXXXXXXX** with your **Apple Team Identiifer**.
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>com.apple.developer.team-identifier</key>
-    <string>XXXXXXXX</string>
-    <key>com.apple.security.app-sandbox</key>
-    <false/>
-    <key>com.apple.security.get-task-allow</key>
-    <true/>
-    <key>com.apple.application-identifier</key>
-    <string>XXXXXXXX.your.app.id</string>
-</dict>
-</plist>
-```
-
-#### Sign the app
-
-Update with your Mac Developer cert signature and run in **Terminal**
-
-```shell
-codesign -f -s "[Mac Developer: Team] (XXXXXXXX)" --deep --verbose Main.app/Contents/Frameworks/*
-codesign -f -s "[Mac Developer: Team] (XXXXXXXX)" --deep --verbose Main.app/Contents/Resources/*
-codesign -f -s "[Mac Developer: Team] (XXXXXXXX)" --entitlements Entitlements.entitlements --verbose Main.app/Contents/MacOS/*
-```
-
-#### Run the app!
 
 ### Prerequisites
 

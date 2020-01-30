@@ -2,13 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>com.apple.application-identifier</key>
+	<string>XXX.x.x.x</string>
 	<key>com.apple.developer.team-identifier</key>
-	<string>XXXXXXXX</string>
+	<string>XXX</string>
 	<key>com.apple.security.app-sandbox</key>
 	<false/>
-	<key>com.apple.security.get-task-allow</key>
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>XXX.x.x.x</string>
+	</array>
+	<key>com.apple.security.cs.allow-unsigned-executable-memory</key>
 	<true/>
-	<key>com.apple.application-identifier</key>
-	<string>XXXXXXXX.your.app.id</string>
 </dict>
 </plist>

@@ -9,6 +9,17 @@ bin-release/*
 bin-release-temp/
 cache/
 
+/packaging/*.app
+/packaging/*.pkg
+/packaging/*.provisionprofile
+/packaging/sign_playground.sh
+/packaging/signTR.sh
+/packaging/Assets.xcassets/AppIcon.appiconset/*.png
+
+bin-release-temp/
+cache/
+EntitlementsTR.entitlements
+
 *.app
 
 # Other files and folders
