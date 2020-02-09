@@ -1,6 +1,6 @@
 package com.tuarua {
-public class SpotlightANE {
-    public function SpotlightANE() {
+public class Spotlight {
+    public function Spotlight() {
     }
     /** Disposes the ANE */
     public static function dispose():void {
