@@ -51,7 +51,7 @@ You will need:
 - IntelliJ IDEA
 - AIR 33.0.2.338+
 - Xcode 11.3
-- [wget](http://rudix.org/packages/wget.html) on macOSS
+- * wget on macOS via `brew install wget`
 
 
 ### References

@@ -1,6 +1,6 @@
 ### 1.2.0
 - iOS/OSX: Fix CSIndexError JSON bug
-- iOS/OSX: Updated to FreSwift 4.2.0
+- iOS/OSX: Updated to FreSwift 4.3.0
 
 ### 1.1.0
 - Upgraded to AIR 32.0.0.116

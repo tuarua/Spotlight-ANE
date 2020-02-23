@@ -151,7 +151,7 @@ public class Main extends Sprite {
 
     private function onExiting(event:Event):void {
         Spotlight.dispose();
-        freSwiftANE.dispose();
+        FreSwift.dispose();
     }
 
 }

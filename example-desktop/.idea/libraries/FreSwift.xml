@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="FreSwift" type="flex">
     <CLASSES>
-      <root url="jar://$DOCUMENTS$/ML-ANE/native_extension/ane/FreSwift.ane!/" />
+      <root url="jar://$DOCUMENTS$/Spotlight-ANE/native_extension/ane/FreSwift.ane!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
