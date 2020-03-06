@@ -1,6 +1,6 @@
 package {
 
-import com.tuarua.SpotlightANE;
+import com.tuarua.Spotlight;
 import com.tuarua.spotlight.ContentType;
 import com.tuarua.spotlight.IndexError;
 import com.tuarua.spotlight.SearchQuery;
@@ -136,7 +136,7 @@ public class StarlingRoot extends Sprite {
     }
 
     private function onExiting(event:Event):void {
-        SpotlightANE.dispose();
+        Spotlight.dispose();
     }
 
 }

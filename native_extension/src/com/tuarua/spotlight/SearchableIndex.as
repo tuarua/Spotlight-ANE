@@ -43,7 +43,7 @@ public class SearchableIndex extends EventDispatcher {
     /** Call this method to add or update items in the index. */
     public function indexSearchableItems(items:Vector.<SearchableItem>, completionHandler:Function):void {
         var ret:* = SpotlightANEContext.context.call("indexSearchableItems", id, items,
-                SpotlightANEContext.createEventId(completionHandler));
+                SpotlightANEContext.createCallback(completionHandler));
         if (ret is ANEError) throw ret as ANEError;
     }
 
@@ -56,14 +56,14 @@ public class SearchableIndex extends EventDispatcher {
             throw new ArgumentError("pass either identifiers or domainIdentifiers");
         }
         var ret:* = SpotlightANEContext.context.call("deleteSearchableItems", id, identifiers,
-                domainIdentifiers, SpotlightANEContext.createEventId(completionHandler));
+                domainIdentifiers, SpotlightANEContext.createCallback(completionHandler));
         if (ret is ANEError) throw ret as ANEError;
     }
 
     /** Call this method to delete all searchable items from the index. */
     public function deleteAllSearchableItems(completionHandler:Function = null):void {
         var ret:* = SpotlightANEContext.context.call("deleteAllSearchableItems", id,
-                SpotlightANEContext.createEventId(completionHandler));
+                SpotlightANEContext.createCallback(completionHandler));
         if (ret is ANEError) throw ret as ANEError;
     }
 

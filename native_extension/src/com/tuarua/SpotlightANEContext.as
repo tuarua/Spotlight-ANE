@@ -28,8 +28,7 @@ public class SpotlightANEContext {
     internal static const TRACE:String = "TRACE";
     private static var _context:ExtensionContext;
     private static var argsAsJSON:Object;
-    public static var closures:Dictionary = new Dictionary();
-    public static var closureCallers:Dictionary = new Dictionary();
+    public static var callbacks:Dictionary = new Dictionary();
 
     private static const INDEX:String = "SpotlightEvent.Index";
     private static const DELETE:String = "SpotlightEvent.Delete";
@@ -54,21 +53,18 @@ public class SpotlightANEContext {
         return _context;
     }
 
-    public static function createEventId(listener:Function, listenerCaller:Object = null):String {
-        var eventId:String;
+    public static function createCallback(listener:Function):String {
+        var id:String;
         if (listener != null) {
-            eventId = context.call("createGUID") as String;
-            closures[eventId] = listener;
-            if (listenerCaller) {
-                closureCallers[eventId] = listenerCaller;
-            }
+            id = context.call("createGUID") as String;
+            callbacks[id] = listener;
         }
-        return eventId;
+        return id;
     }
 
     private static function gotEvent(event:StatusEvent):void {
         var err:IndexError;
-        var closure:Function;
+        var callback:Function;
         switch (event.level) {
             case TRACE:
                 trace("[" + NAME + "]", event.code);
@@ -78,13 +74,13 @@ public class SpotlightANEContext {
             case DELETE_ALL:
                 try {
                     argsAsJSON = JSON.parse(event.code);
-                    closure = closures[argsAsJSON.eventId];
-                    if (closure == null) return;
+                    callback = callbacks[argsAsJSON.callbackId];
+                    if (callback == null) return;
                     if (argsAsJSON.hasOwnProperty("error") && argsAsJSON.error) {
                         err = new IndexError(argsAsJSON.error.text, argsAsJSON.error.id);
                     }
-                    closure.call(null, err);
-                    delete closures[argsAsJSON.eventId];
+                    callback.call(null, err);
+                    delete callbacks[argsAsJSON.callbackId];
                 } catch (e:Error) {
                     trace("parsing error", event.code, e.message);
                 }
@@ -92,17 +88,17 @@ public class SpotlightANEContext {
             case QUERY_COMPLETE:
                 try {
                     argsAsJSON = JSON.parse(event.code);
-                    closure = closures[argsAsJSON.eventId];
-                    if (closure == null) return;
+                    callback = callbacks[argsAsJSON.callbackId];
+                    if (callback == null) return;
                     if (argsAsJSON.hasOwnProperty("error") && argsAsJSON.error) {
                         err = new IndexError(argsAsJSON.error.text, argsAsJSON.error.id);
-                        closure.call(null, null, err);
+                        callback.call(null, null, err);
                     } else {
                         var results:* = SpotlightANEContext.context.call("getQueryResults", argsAsJSON.id);
                         if (results is ANEError) throwError(results as ANEError);
-                        closure.call(null, results, err);
+                        callback.call(null, results, err);
                     }
-                    delete closures[argsAsJSON.eventId];
+                    delete callbacks[argsAsJSON.callbackId];
                 } catch (e:Error) {
                     trace("parsing error", event.code, e.message);
                 }

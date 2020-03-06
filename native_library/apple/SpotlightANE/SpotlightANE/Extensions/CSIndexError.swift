@@ -23,6 +23,6 @@ import MobileCoreServices
 
 public extension CSIndexError {
     func toDictionary() -> [String: Any] {
-        return ["text": self.localizedDescription, "id": self.code]
+        return ["text": self.localizedDescription, "id": self.errorCode]
     }
 }

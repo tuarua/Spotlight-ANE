@@ -48,25 +48,12 @@ public extension CSSearchableItem {
 
 public extension Array where Element == CSSearchableItem {
     init?(_ freObject: FREObject?) {
-        self.init()
-        guard let rv = freObject else { return }
-        var ret = [CSSearchableItem]()
-        let array = FREArray(rv)
-        for item in array {
-            if let v = CSSearchableItem(item) {
-                ret.append(v)
-            }
-        }
-        self = ret
+        guard let rv = freObject else { return nil }
+        self = FREArray(rv).compactMap { CSSearchableItem($0) }
     }
     func toFREObject() -> FREObject? {
-        guard let ret = FREArray(className: "com.tuarua.spotlight.SearchableItem",
-                                 length: self.count, fixed: true) else { return nil }
-        var cnt: UInt = 0
-        for item in self {
-            ret[cnt] = item.toFREObject()
-            cnt += 1
-        }
-        return ret.rawValue
+        return FREArray(className: "com.tuarua.spotlight.SearchableItem",
+                        length: self.count, fixed: true,
+                        items: self.compactMap { $0.toFREObject() })?.rawValue
     }
 }

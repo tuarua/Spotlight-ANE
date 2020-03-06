@@ -35,7 +35,7 @@ public class SwiftController: NSObject {
         guard argc > 1,
             let id = String(argv[0])
             else {
-                return FreArgError(message: "initIndex").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         if let name = String(argv[1]) {
             indexes[id] = CSSearchableIndex(name: name)
@@ -55,21 +55,21 @@ public class SwiftController: NSObject {
             let items = [CSSearchableItem](argv[1]),
             let index = indexes[id]
             else {
-                return FreArgError(message: "indexSearchableItems").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
 
-        let eventId = String(argv[2])
+        let callbackId = String(argv[2])
         
         index.indexSearchableItems(items) { error in
-            guard let eventId = eventId else { return }
+            guard let callbackId = callbackId else { return }
             if let error = error as NSError? {
                 self.dispatchEvent(name: SpotlightEvent.index,
-                                   value: SpotlightEvent(eventId: eventId,
+                                   value: SpotlightEvent(callbackId: callbackId,
                                                          id: id,
                                                          error: CSIndexError(_nsError: error)).toJSONString())
             } else {
                 self.dispatchEvent(name: SpotlightEvent.index,
-                                   value: SpotlightEvent(eventId: eventId, id: id).toJSONString())
+                                   value: SpotlightEvent(callbackId: callbackId, id: id).toJSONString())
             }
         }
         return nil
@@ -80,33 +80,33 @@ public class SwiftController: NSObject {
             let id = String(argv[0]),
             let index = indexes[id]
             else {
-                return FreArgError(message: "deleteSearchableItems").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
-        let eventId = String(argv[3])
+        let callbackId = String(argv[3])
         if let identifiers = [String](argv[1]) {
             index.deleteSearchableItems(withIdentifiers: identifiers) { error in
-                guard let eventId = eventId else { return }
+                guard let callbackId = callbackId else { return }
                 if let error = error as NSError? {
                     self.dispatchEvent(name: SpotlightEvent.delete,
-                                       value: SpotlightEvent(eventId: eventId,
+                                       value: SpotlightEvent(callbackId: callbackId,
                                                              id: id,
                                                              error: CSIndexError(_nsError: error)).toJSONString())
                 } else {
                     self.dispatchEvent(name: SpotlightEvent.delete,
-                                       value: SpotlightEvent(eventId: eventId, id: id).toJSONString())
+                                       value: SpotlightEvent(callbackId: callbackId, id: id).toJSONString())
                 }
             }
         } else if let domainIdentifiers = [String](argv[2]) {
             index.deleteSearchableItems(withDomainIdentifiers: domainIdentifiers) { error in
-                guard let eventId = eventId else { return }
+                guard let callbackId = callbackId else { return }
                 if let error = error as NSError? {
                     self.dispatchEvent(name: SpotlightEvent.delete,
-                                       value: SpotlightEvent(eventId: eventId,
+                                       value: SpotlightEvent(callbackId: callbackId,
                                                              id: id,
                                                              error: CSIndexError(_nsError: error)).toJSONString())
                 } else {
                     self.dispatchEvent(name: SpotlightEvent.delete,
-                                       value: SpotlightEvent(eventId: eventId, id: id).toJSONString())
+                                       value: SpotlightEvent(callbackId: callbackId, id: id).toJSONString())
                 }
             }
         }
@@ -118,19 +118,19 @@ public class SwiftController: NSObject {
             let id = String(argv[0]),
             let index = indexes[id]
             else {
-                return FreArgError(message: "deleteAllSearchableItems").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
-        let eventId = String(argv[1])
+        let callbackId = String(argv[1])
         index.deleteAllSearchableItems { error in
-            guard let eventId = eventId else { return }
+            guard let callbackId = callbackId else { return }
             if let error = error as NSError? {
                 self.dispatchEvent(name: SpotlightEvent.deleteAll,
-                                   value: SpotlightEvent(eventId: eventId,
+                                   value: SpotlightEvent(callbackId: callbackId,
                                                          id: id,
                                                          error: CSIndexError(_nsError: error)).toJSONString())
             } else {
                 self.dispatchEvent(name: SpotlightEvent.deleteAll,
-                                   value: SpotlightEvent(eventId: eventId, id: id).toJSONString())
+                                   value: SpotlightEvent(callbackId: callbackId, id: id).toJSONString())
             }
             
         }
@@ -155,7 +155,7 @@ public class SwiftController: NSObject {
             let id = String(argv[0]),
             let queryString = String(argv[1])
             else {
-                return FreArgError(message: "initQuery").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         let attributes = [String](argv[2])
         queries[id] = CSSearchQuery(queryString: queryString, attributes: attributes)
@@ -167,9 +167,9 @@ public class SwiftController: NSObject {
             let id = String(argv[0]),
             let query = queries[id]
             else {
-                return FreArgError(message: "startQuery").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
-        let eventId = String(argv[1])
+        let callbackId = String(argv[1])
         searchResults[id] = [CSSearchableItem]()
         query.foundItemsHandler = { items in
             self.searchResults[id]?.append(contentsOf: items)
@@ -178,12 +178,12 @@ public class SwiftController: NSObject {
         query.completionHandler = { error in
             if let error = error as NSError? {
                 self.dispatchEvent(name: SpotlightEvent.queryComplete,
-                                   value: SpotlightEvent(eventId: eventId,
+                                   value: SpotlightEvent(callbackId: callbackId,
                                                          id: id,
                                                          error: CSSearchQueryError(_nsError: error)).toJSONString())
             } else {
                 self.dispatchEvent(name: SpotlightEvent.queryComplete,
-                                   value: SpotlightEvent(eventId: eventId, id: id).toJSONString())
+                                   value: SpotlightEvent(callbackId: callbackId, id: id).toJSONString())
             }
         }
         query.start()
@@ -194,7 +194,7 @@ public class SwiftController: NSObject {
         guard argc > 0,
             let id = String(argv[0])
             else {
-                return FreArgError(message: "cancelQuery").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         queries[id]?.cancel()
         return nil
@@ -204,7 +204,7 @@ public class SwiftController: NSObject {
         guard argc > 0,
             let id = String(argv[0])
             else {
-                return FreArgError(message: "disposeQuery").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         queries[id] = nil
         searchResults[id] = nil
@@ -215,7 +215,7 @@ public class SwiftController: NSObject {
         guard argc > 0,
             let id = String(argv[0])
             else {
-                return FreArgError(message: "disposeIndex").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         indexes[id] = nil
         return nil
@@ -225,7 +225,7 @@ public class SwiftController: NSObject {
         guard argc > 0,
             let id = String(argv[0])
             else {
-                return FreArgError(message: "getQueryResults").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         return searchResults[id]?.toFREObject()
     }

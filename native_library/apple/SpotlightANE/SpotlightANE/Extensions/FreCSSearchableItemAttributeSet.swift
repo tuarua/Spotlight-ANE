@@ -16,6 +16,7 @@
 import Foundation
 import FreSwift
 import CoreSpotlight
+import SwiftyJSON
 #if canImport(MobileCoreServices)
 import MobileCoreServices
 #else
@@ -629,21 +630,21 @@ public extension CSSearchableItemAttributeSet {
             if let userCurated: Bool = fre.userCurated, userCurated {
                 self.userCurated = 1
             }
-            if let rankingHint: NSNumber = fre.rankingHint, rankingHint > -1.0 {
+            if let rankingHint: NSNumber = fre.rankingHint, Double(truncating: rankingHint) > -1.0 {
                 self.rankingHint = rankingHint
             }
         }
 
-        if let audioSampleRate: NSNumber = fre.audioSampleRate, audioSampleRate > -1.0 {
+        if let audioSampleRate: NSNumber = fre.audioSampleRate, Double(truncating: audioSampleRate) > -1.0 {
             self.audioSampleRate = audioSampleRate
         }
-        if let audioChannelCount: NSNumber = fre.audioChannelCount, audioChannelCount > -1.0 {
+        if let audioChannelCount: NSNumber = fre.audioChannelCount, Double(truncating: audioChannelCount) > -1.0 {
             self.audioChannelCount = audioChannelCount
         }
-        if let fileSize: NSNumber = fre.fileSize, fileSize > -1.0 {
+        if let fileSize: NSNumber = fre.fileSize, Double(truncating: fileSize) > -1.0 {
             self.fileSize = fileSize
         }
-        if let tempo: NSNumber = fre.tempo, tempo > -1.0 {
+        if let tempo: NSNumber = fre.tempo, Double(truncating: tempo) > -1.0 {
             self.tempo = tempo
         }
         if let keySignature: String = fre.keySignature {
@@ -667,7 +668,7 @@ public extension CSSearchableItemAttributeSet {
         if let artist: String = fre.artist {
             self.artist = artist
         }
-        if let audioTrackNumber: NSNumber = fre.audioTrackNumber, audioTrackNumber > -1.0 {
+        if let audioTrackNumber: NSNumber = fre.audioTrackNumber, Double(truncating: audioTrackNumber) > -1.0 {
             self.audioTrackNumber = audioTrackNumber
         }
         if let recordingDate: Date = fre.recordingDate {
@@ -701,16 +702,16 @@ public extension CSSearchableItemAttributeSet {
         if let audiences: [String] = fre.audiences, audiences.count > 0 {
             self.audiences = audiences
         }
-        if let fileSize: NSNumber = fre.fileSize, fileSize > -1.0 {
+        if let fileSize: NSNumber = fre.fileSize, Double(truncating: fileSize) > -1.0 {
             self.fileSize = fileSize
         }
-        if let pageCount: NSNumber = fre.pageCount, pageCount > -1.0 {
+        if let pageCount: NSNumber = fre.pageCount, Double(truncating: pageCount) > -1.0 {
             self.pageCount = pageCount
         }
-        if let pageWidth: NSNumber = fre.pageWidth, pageWidth > -1.0 {
+        if let pageWidth: NSNumber = fre.pageWidth, Double(truncating: pageWidth) > -1.0 {
             self.pageWidth = pageWidth
         }
-        if let pageHeight: NSNumber = fre.pageHeight, pageHeight > -1.0 {
+        if let pageHeight: NSNumber = fre.pageHeight, Double(truncating: pageHeight) > -1.0 {
             self.pageHeight = pageHeight
         }
         if let securityMethod: String = fre.securityMethod {
@@ -781,7 +782,7 @@ public extension CSSearchableItemAttributeSet {
         if let addedDate: Date = fre.addedDate {
             self.addedDate = addedDate
         }
-        if let duration: NSNumber = fre.duration, duration > -1.0 {
+        if let duration: NSNumber = fre.duration, Double(truncating: duration) > -1.0 {
             self.duration = duration
         }
         if let contactKeywords: [String] = fre.contentSources, contactKeywords.count > 0 {
@@ -796,16 +797,16 @@ public extension CSSearchableItemAttributeSet {
         if let streamable: Bool = fre.streamable, streamable {
             self.streamable = 1
         }
-        if let totalBitRate: NSNumber = fre.totalBitRate, totalBitRate > -1.0 {
+        if let totalBitRate: NSNumber = fre.totalBitRate, Double(truncating: totalBitRate) > -1.0 {
             self.totalBitRate = totalBitRate
         }
-        if let videoBitRate: NSNumber = fre.videoBitRate, videoBitRate > -1.0 {
+        if let videoBitRate: NSNumber = fre.videoBitRate, Double(truncating: videoBitRate) > -1.0 {
             self.videoBitRate = videoBitRate
         }
-        if let audioBitRate: NSNumber = fre.audioBitRate, audioBitRate > -1.0 {
+        if let audioBitRate: NSNumber = fre.audioBitRate, Double(truncating: audioBitRate) > -1.0 {
             self.audioBitRate = audioBitRate
         }
-        if let deliveryType: NSNumber = fre.deliveryType, deliveryType > -1.0 {
+        if let deliveryType: NSNumber = fre.deliveryType, Double(truncating: deliveryType) > -1.0 {
             self.deliveryType = deliveryType
         }
         if let organizations: [String] = fre.organizations, organizations.count > 0 {
@@ -829,13 +830,13 @@ public extension CSSearchableItemAttributeSet {
         if let coverage: [String] = fre.coverage, coverage.count > 0 {
             self.coverage = coverage
         }
-        if let rating: NSNumber = fre.rating, rating > -1.0 {
+        if let rating: NSNumber = fre.rating, Double(truncating: rating) > -1.0 {
             self.rating = rating
         }
         if let ratingDescription: String = fre.ratingDescription {
             self.ratingDescription = ratingDescription
         }
-        if let playCount: NSNumber = fre.playCount, playCount > -1.0 {
+        if let playCount: NSNumber = fre.playCount, Double(truncating: playCount) > -1.0 {
             self.playCount = playCount
         }
         if let information: String = fre.information {
@@ -869,28 +870,28 @@ public extension CSSearchableItemAttributeSet {
             self.url = URL(safe: url)
         }
 
-        if let pixelHeight: NSNumber = fre.pixelHeight, pixelHeight > -1.0 {
+        if let pixelHeight: NSNumber = fre.pixelHeight, Double(truncating: pixelHeight) > -1.0 {
             self.pixelHeight = pixelHeight
         }
-        if let pixelWidth: NSNumber = fre.pixelWidth, pixelWidth > -1.0 {
+        if let pixelWidth: NSNumber = fre.pixelWidth, Double(truncating: pixelWidth) > -1.0 {
             self.pixelWidth = pixelWidth
         }
-        if let pixelCount: NSNumber = fre.pixelCount, pixelCount > -1.0 {
+        if let pixelCount: NSNumber = fre.pixelCount, Double(truncating: pixelCount) > -1.0 {
             self.pixelCount = pixelCount
         }
         if let colorSpace: String = fre.colorSpace {
             self.colorSpace = colorSpace
         }
-        if let bitsPerSample: NSNumber = fre.bitsPerSample, bitsPerSample > -1.0 {
+        if let bitsPerSample: NSNumber = fre.bitsPerSample, Double(truncating: bitsPerSample) > -1.0 {
             self.bitsPerSample = bitsPerSample
         }
         if let flashOn: Bool = fre.flashOn, flashOn {
             self.flashOn = 1
         }
-        if let focalLength: NSNumber = fre.focalLength, focalLength > -1.0 {
+        if let focalLength: NSNumber = fre.focalLength, Double(truncating: focalLength) > -1.0 {
             self.focalLength = focalLength
         }
-        if let focalLength35mm: NSNumber = fre.focalLength35mm, focalLength35mm > -1.0 {
+        if let focalLength35mm: NSNumber = fre.focalLength35mm, Double(truncating: focalLength35mm) > -1.0 {
             self.focalLength35mm = focalLength35mm
         }
         if let acquisitionMake: String = fre.acquisitionMake {
@@ -905,34 +906,34 @@ public extension CSSearchableItemAttributeSet {
         if let lensModel: String = fre.lensModel {
             self.lensModel = lensModel
         }
-        if let isoSpeed: NSNumber = fre.isoSpeed, isoSpeed > -1.0 {
+        if let isoSpeed: NSNumber = fre.isoSpeed, Double(truncating: isoSpeed) > -1.0 {
             self.isoSpeed = isoSpeed
         }
-        if let orientation: NSNumber = fre.orientation, orientation > -1.0 {
+        if let orientation: NSNumber = fre.orientation, Double(truncating: orientation) > -1.0 {
             self.orientation = orientation
         }
         if let layerNames: [String] = fre.layerNames, layerNames.count > 0 {
             self.layerNames = layerNames
         }
-        if let whiteBalance: NSNumber = fre.whiteBalance, whiteBalance > -1.0 {
+        if let whiteBalance: NSNumber = fre.whiteBalance, Double(truncating: whiteBalance) > -1.0 {
             self.whiteBalance = whiteBalance
         }
-        if let aperture: NSNumber = fre.aperture, aperture > -1.0 {
+        if let aperture: NSNumber = fre.aperture, Double(truncating: aperture) > -1.0 {
             self.aperture = aperture
         }
         if let profileName: String = fre.profileName {
             self.profileName = profileName
         }
-        if let resolutionWidthDPI: NSNumber = fre.resolutionWidthDPI, resolutionWidthDPI > -1.0 {
+        if let resolutionWidthDPI: NSNumber = fre.resolutionWidthDPI, Double(truncating: resolutionWidthDPI) > -1.0 {
             self.resolutionWidthDPI = resolutionWidthDPI
         }
-        if let resolutionHeightDPI: NSNumber = fre.resolutionHeightDPI, resolutionHeightDPI > -1.0 {
+        if let resolutionHeightDPI: NSNumber = fre.resolutionHeightDPI, Double(truncating: resolutionHeightDPI) > -1.0 {
             self.resolutionHeightDPI = resolutionHeightDPI
         }
-        if let exposureMode: NSNumber = fre.exposureMode, exposureMode > -1.0 {
+        if let exposureMode: NSNumber = fre.exposureMode, Double(truncating: exposureMode) > -1.0 {
             self.exposureMode = exposureMode
         }
-        if let exposureTime: NSNumber = fre.exposureTime, exposureTime > -1.0 {
+        if let exposureTime: NSNumber = fre.exposureTime, Double(truncating: exposureTime) > -1.0 {
             self.exposureTime = exposureTime
         }
         if let exifVersion: String = fre.exifVersion {
@@ -950,10 +951,10 @@ public extension CSSearchableItemAttributeSet {
         if let meteringMode: String = fre.meteringMode {
             self.meteringMode = meteringMode
         }
-        if let maxAperture: NSNumber = fre.maxAperture, maxAperture > -1.0 {
+        if let maxAperture: NSNumber = fre.maxAperture, Double(truncating: maxAperture) > -1.0 {
             self.maxAperture = maxAperture
         }
-        if let fNumber: NSNumber = fre.fNumber, fNumber > -1.0 {
+        if let fNumber: NSNumber = fre.fNumber, Double(truncating: fNumber) > -1.0 {
             self.fNumber = fNumber
         }
         if let exposureProgram: String = fre.exposureProgram {
@@ -1072,28 +1073,28 @@ public extension CSSearchableItemAttributeSet {
         if let fullyFormattedAddress: String = fre.fullyFormattedAddress {
             self.fullyFormattedAddress = fullyFormattedAddress
         }
-        if let altitude: NSNumber = fre.altitude, altitude > -1.0 {
+        if let altitude: NSNumber = fre.altitude, Double(truncating: altitude) > -1.0 {
             self.altitude = altitude
         }
-        if let latitude: NSNumber = fre.latitude, latitude > -1.0 {
+        if let latitude: NSNumber = fre.latitude, Double(truncating: latitude) > -1.0 {
             self.latitude = latitude
         }
-        if let longitude: NSNumber = fre.longitude, longitude > -1.0 {
+        if let longitude: NSNumber = fre.longitude, Double(truncating: longitude) > -1.0 {
             self.longitude = longitude
         }
-        if let speed: NSNumber = fre.speed, speed > -1.0 {
+        if let speed: NSNumber = fre.speed, Double(truncating: speed) > -1.0 {
             self.speed = speed
         }
         if let timestamp: Date = fre.timestamp {
             self.timestamp = timestamp
         }
-        if let imageDirection: NSNumber = fre.imageDirection, imageDirection > -1.0 {
+        if let imageDirection: NSNumber = fre.imageDirection, Double(truncating: imageDirection) > -1.0 {
             self.imageDirection = imageDirection
         }
         if let namedLocation: String = fre.namedLocation {
             self.namedLocation = namedLocation
         }
-        if let gpsTrack: NSNumber = fre.gpsTrack, gpsTrack > -1.0 {
+        if let gpsTrack: NSNumber = fre.gpsTrack, Double(truncating: gpsTrack) > -1.0 {
             self.gpsTrack = gpsTrack
         }
         if let gpsStatus: String = fre.gpsStatus {
@@ -1102,22 +1103,22 @@ public extension CSSearchableItemAttributeSet {
         if let gpsMeasureMode: String = fre.gpsMeasureMode {
             self.gpsMeasureMode = gpsMeasureMode
         }
-        if let gpsdop: NSNumber = fre.gpsdop, gpsdop > -1.0 {
+        if let gpsdop: NSNumber = fre.gpsdop, Double(truncating: gpsdop) > -1.0 {
             self.gpsdop = gpsdop
         }
         if let gpsMapDatum: String = fre.gpsMapDatum {
             self.gpsMapDatum = gpsMapDatum
         }
-        if let gpsDestLatitude: NSNumber = fre.gpsDestLatitude, gpsDestLatitude > -1.0 {
+        if let gpsDestLatitude: NSNumber = fre.gpsDestLatitude, Double(truncating: gpsDestLatitude) > -1.0 {
             self.gpsDestLatitude = gpsDestLatitude
         }
-        if let gpsDestLongitude: NSNumber = fre.gpsDestLongitude, gpsDestLongitude > -1.0 {
+        if let gpsDestLongitude: NSNumber = fre.gpsDestLongitude, Double(truncating: gpsDestLongitude) > -1.0 {
             self.gpsDestLongitude = gpsDestLongitude
         }
-        if let gpsDestBearing: NSNumber = fre.gpsDestBearing, gpsDestBearing > -1.0 {
+        if let gpsDestBearing: NSNumber = fre.gpsDestBearing, Double(truncating: gpsDestBearing) > -1.0 {
             self.gpsDestBearing = gpsDestBearing
         }
-        if let gpsDestDistance: NSNumber = fre.gpsDestDistance, gpsDestDistance > -1.0 {
+        if let gpsDestDistance: NSNumber = fre.gpsDestDistance, Double(truncating: gpsDestDistance) > -1.0 {
             self.gpsDestDistance = gpsDestDistance
         }
         if let gpsProcessingMethod: String = fre.gpsProcessingMethod {
@@ -1129,7 +1130,7 @@ public extension CSSearchableItemAttributeSet {
         if let gpsDateStamp: Date = fre.gpsDateStamp {
             self.gpsDateStamp = gpsDateStamp
         }
-        if let gpsDifferental: NSNumber = fre.gpsDifferental, gpsDifferental > -1.0 {
+        if let gpsDifferental: NSNumber = fre.gpsDifferental, Double(truncating: gpsDifferental) > -1.0 {
             self.gpsDifferental = gpsDifferental
         }
         if let supportsNavigation: Bool = fre.supportsNavigation, supportsNavigation {
