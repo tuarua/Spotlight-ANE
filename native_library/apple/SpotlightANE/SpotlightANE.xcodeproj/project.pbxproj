@@ -11,11 +11,11 @@
 		902F5D4C21EBC63800F1E8EF /* CSSearchQueryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */; };
 		90382C3F2396CED700A2F89D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 90382C3E2396CED700A2F89D /* SwiftyJSON */; };
 		90382C412396D13900A2F89D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 90382C402396D13900A2F89D /* SwiftyJSON */; };
+		904C000D2442396C008FBA54 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904C000C2442396C008FBA54 /* CoreServices.framework */; };
 		90B7C4EF21E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; platformFilter = ios; };
 		90B7C4F021E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; };
 		90CB78AE21E8F54A0038F4D9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78AD21E8F54A0038F4D9 /* CoreSpotlight.framework */; };
 		90CB78B021E8F58A0038F4D9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78AF21E8F58A0038F4D9 /* CoreSpotlight.framework */; platformFilter = ios; };
-		90CB78B221E8F5910038F4D9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78B121E8F5910038F4D9 /* MobileCoreServices.framework */; platformFilter = ios; };
 		90CB78B421E903A20038F4D9 /* CSIndexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B321E903A20038F4D9 /* CSIndexError.swift */; platformFilter = ios; };
 		90CB78B521E903A20038F4D9 /* CSIndexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B321E903A20038F4D9 /* CSIndexError.swift */; };
 		90CB78B721E906100038F4D9 /* SpotlightEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B621E906100038F4D9 /* SpotlightEvent.swift */; platformFilter = ios; };
@@ -59,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSearchQueryError.swift; sourceTree = "<group>"; };
+		904C000C2442396C008FBA54 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreCSSearchableItem.swift; sourceTree = "<group>"; };
 		90CB78AD21E8F54A0038F4D9 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreSpotlight.framework; sourceTree = DEVELOPER_DIR; };
 		90CB78AF21E8F58A0038F4D9 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
@@ -114,9 +115,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CB78B221E8F5910038F4D9 /* MobileCoreServices.framework in Frameworks */,
 				90CB78B021E8F58A0038F4D9 /* CoreSpotlight.framework in Frameworks */,
 				90382C412396D13900A2F89D /* SwiftyJSON in Frameworks */,
+				904C000D2442396C008FBA54 /* CoreServices.framework in Frameworks */,
 				CE0560401FB25CE200D06976 /* FreSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +128,7 @@
 		CE05603D1FB25CD100D06976 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				904C000C2442396C008FBA54 /* CoreServices.framework */,
 				90CB78B121E8F5910038F4D9 /* MobileCoreServices.framework */,
 				90CB78AD21E8F54A0038F4D9 /* CoreSpotlight.framework */,
 				90CB78AF21E8F58A0038F4D9 /* CoreSpotlight.framework */,
@@ -740,7 +742,6 @@
 		CE87F4891FB259FA005CF7DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
@@ -785,7 +786,6 @@
 		CE87F48A1FB259FA005CF7DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
