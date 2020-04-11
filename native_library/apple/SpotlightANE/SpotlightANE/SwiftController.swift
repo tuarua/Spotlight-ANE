@@ -17,8 +17,8 @@ import Foundation
 import FreSwift
 import CoreSpotlight
 import Contacts
-#if canImport(MobileCoreServices)
-import MobileCoreServices
+#if canImport(CoreServices)
+import CoreServices
 #else
 #endif
 
