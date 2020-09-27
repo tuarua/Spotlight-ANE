@@ -4,9 +4,14 @@ Spotlight Adobe Air Native Extension for OSX 10.12+, iOS 10.0+
 
 -------------
 
-Much time, skill and effort has gone into this. Help support the project
+## Prerequisites
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/tuarua)
+You will need:
+
+- IntelliJ IDEA
+- AIR 33.1.1.217+
+- [.Net Core Runtime](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [AIR-Tools](https://github.com/tuarua/AIR-Tools/)
 
 -------------
 
@@ -14,12 +19,12 @@ Much time, skill and effort has gone into this. Help support the project
 
 ### The ANE + Dependencies
 
-N.B. You must use a Mac to build an iOS app using this ANE. Windows is NOT supported.
+>N.B. You must use a Mac to build an iOS app using this ANE. Windows is **NOT** supported.
 
-From the command line cd into /example-mobile and run:
+From Terminal cd into /example-mobile and run the _"air-tools"_ command (You will need [AIR-Tools](https://github.com/tuarua/AIR-Tools/) installed)
 
-```shell
-bash get_ios_dependencies.sh
+```bash
+air-tools install
 ```
 
 This folder, ios_dependencies/device/Frameworks, must be packaged as part of your app when creating the ipa. How this is done will depend on the IDE you are using.
@@ -30,28 +35,17 @@ After the ipa is created unzip it and confirm there is a "Frameworks" folder in 
 
 ### The ANE + Dependencies
 
->N.B. You must create a **signed** release to use on OSX. It is not possible to run Spotlight from a debug app.
+>N.B. You must create a **signed** release to use on macOS. It is not possible to run Spotlight from a debug app.
 
-From the command line cd into /example-desktop and run:
+From Terminal cd into /example-desktop and run:
 
 ```shell
-bash get_dependencies.sh
+air-tools install
 ```
 
 ### App Setup
 
 As per iOS above.
-
-
-
-### Prerequisites
-
-You will need:
-- a Mac. Windows is not supported
-- IntelliJ IDEA
-- AIR 33.0.2.338+
-- Xcode 11.3
-- wget on macOS via `brew install wget`
 
 
 ### References

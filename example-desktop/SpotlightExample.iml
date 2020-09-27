@@ -11,10 +11,7 @@
             <entry library-name="greensock" library-level="project">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-name="FreSwift" library-level="project">
-              <dependency linkage="Merged" />
-            </entry>
-            <entry library-name="SpotlightANE" library-level="project">
+            <entry library-name="extensions" library-level="project">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -45,5 +42,6 @@
     <orderEntry type="library" exported="" name="greensock" level="project" />
     <orderEntry type="library" exported="" name="FreSwift" level="project" />
     <orderEntry type="library" exported="" name="SpotlightANE" level="project" />
+    <orderEntry type="library" exported="" name="extensions" level="project" />
   </component>
 </module>
