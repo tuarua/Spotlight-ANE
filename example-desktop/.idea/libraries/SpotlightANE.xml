@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="SpotlightANE" type="flex">
-    <CLASSES>
-      <root url="jar://$DOCUMENTS$/Spotlight-ANE/native_extension/ane/SpotlightANE.ane!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

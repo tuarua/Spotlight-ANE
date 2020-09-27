@@ -1,0 +1,15 @@
+{
+  "name": "spotlight-sample",
+  "version": "1.4.0",
+  "appDescriptor": "src/Main-app.xml",
+  "variables": {
+  },
+  "airDotPrefix": true,
+  "appleTeamId": "XXXXXX",
+  "repository": {
+    "url": "https://tuarua.github.io/air/air_packages.json"
+  },
+  "dependencies": {
+    "com.tuarua.SpotlightANE": "1.4.0"
+  }
+}
