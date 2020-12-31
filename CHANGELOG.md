@@ -1,3 +1,7 @@
+### 1.6.0
+- iOS/macOS: Updated to FreSwift 5.1.0
+- Upgraded to AIR 33.1.1.345
+
 ### 1.5.0
 - iOS/OSX: Updated to FreSwift 5.0.0
 - Upgraded to AIR 33.1.1.300

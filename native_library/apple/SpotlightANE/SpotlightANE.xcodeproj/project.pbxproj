@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,16 +11,16 @@
 		902F5D4C21EBC63800F1E8EF /* CSSearchQueryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */; };
 		90382C3F2396CED700A2F89D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 90382C3E2396CED700A2F89D /* SwiftyJSON */; };
 		90382C412396D13900A2F89D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 90382C402396D13900A2F89D /* SwiftyJSON */; };
-		904C000D2442396C008FBA54 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904C000C2442396C008FBA54 /* CoreServices.framework */; };
+		904C000D2442396C008FBA54 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904C000C2442396C008FBA54 /* CoreServices.framework */; platformFilter = ios; };
+		906EAE82259E23F600A82FB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906EAE81259E23F600A82FB9 /* Cocoa.framework */; };
+		906EAE84259E241400A82FB9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906EAE83259E241400A82FB9 /* CoreSpotlight.framework */; };
 		90B7C4EF21E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; platformFilter = ios; };
 		90B7C4F021E5617C00FACE89 /* FreCSSearchableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */; };
-		90CB78AE21E8F54A0038F4D9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78AD21E8F54A0038F4D9 /* CoreSpotlight.framework */; };
 		90CB78B021E8F58A0038F4D9 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CB78AF21E8F58A0038F4D9 /* CoreSpotlight.framework */; platformFilter = ios; };
 		90CB78B421E903A20038F4D9 /* CSIndexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B321E903A20038F4D9 /* CSIndexError.swift */; platformFilter = ios; };
 		90CB78B521E903A20038F4D9 /* CSIndexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B321E903A20038F4D9 /* CSIndexError.swift */; };
 		90CB78B721E906100038F4D9 /* SpotlightEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B621E906100038F4D9 /* SpotlightEvent.swift */; platformFilter = ios; };
 		90CB78B821E906100038F4D9 /* SpotlightEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB78B621E906100038F4D9 /* SpotlightEvent.swift */; };
-		90CC24CC21274ED0000CE135 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CC24CB21274ED0000CE135 /* Cocoa.framework */; };
 		90D0D2A121E4028400A59861 /* FreCSSearchableItemAttributeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A021E4028400A59861 /* FreCSSearchableItemAttributeSet.swift */; platformFilter = ios; };
 		90D0D2A221E4028400A59861 /* FreCSSearchableItemAttributeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A021E4028400A59861 /* FreCSSearchableItemAttributeSet.swift */; };
 		90D0D2A721E423BA00A59861 /* FreCSPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0D2A621E423BA00A59861 /* FreCSPerson.swift */; platformFilter = ios; };
@@ -60,13 +60,13 @@
 /* Begin PBXFileReference section */
 		902F5D4A21EBC63800F1E8EF /* CSSearchQueryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSearchQueryError.swift; sourceTree = "<group>"; };
 		904C000C2442396C008FBA54 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		906EAE81259E23F600A82FB9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		906EAE83259E241400A82FB9 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreSpotlight.framework; sourceTree = DEVELOPER_DIR; };
 		90B7C4EE21E5617C00FACE89 /* FreCSSearchableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreCSSearchableItem.swift; sourceTree = "<group>"; };
-		90CB78AD21E8F54A0038F4D9 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreSpotlight.framework; sourceTree = DEVELOPER_DIR; };
 		90CB78AF21E8F58A0038F4D9 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		90CB78B121E8F5910038F4D9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		90CB78B321E903A20038F4D9 /* CSIndexError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSIndexError.swift; sourceTree = "<group>"; };
 		90CB78B621E906100038F4D9 /* SpotlightEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightEvent.swift; sourceTree = "<group>"; };
-		90CC24CB21274ED0000CE135 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		90D0D2A021E4028400A59861 /* FreCSSearchableItemAttributeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreCSSearchableItemAttributeSet.swift; sourceTree = "<group>"; };
 		90D0D2A621E423BA00A59861 /* FreCSPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreCSPerson.swift; sourceTree = "<group>"; };
 		CE05603E1FB25CE200D06976 /* FreSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FreSwift.framework; path = Carthage/Build/iOS/FreSwift.framework; sourceTree = "<group>"; };
@@ -93,9 +93,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906EAE84259E241400A82FB9 /* CoreSpotlight.framework in Frameworks */,
+				906EAE82259E23F600A82FB9 /* Cocoa.framework in Frameworks */,
 				90382C3F2396CED700A2F89D /* SwiftyJSON in Frameworks */,
-				90CB78AE21E8F54A0038F4D9 /* CoreSpotlight.framework in Frameworks */,
-				90CC24CC21274ED0000CE135 /* Cocoa.framework in Frameworks */,
 				CE6DC5B420542E7800E20217 /* Adobe AIR_64 in Frameworks */,
 				CE6DC5B520542E7A00E20217 /* Adobe AIR in Frameworks */,
 				CE6DC5C520542F0000E20217 /* FreSwift.framework in Frameworks */,
@@ -128,11 +128,11 @@
 		CE05603D1FB25CD100D06976 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				906EAE83259E241400A82FB9 /* CoreSpotlight.framework */,
+				906EAE81259E23F600A82FB9 /* Cocoa.framework */,
 				904C000C2442396C008FBA54 /* CoreServices.framework */,
 				90CB78B121E8F5910038F4D9 /* MobileCoreServices.framework */,
-				90CB78AD21E8F54A0038F4D9 /* CoreSpotlight.framework */,
 				90CB78AF21E8F58A0038F4D9 /* CoreSpotlight.framework */,
-				90CC24CB21274ED0000CE135 /* Cocoa.framework */,
 				CE6DC5C420542F0000E20217 /* FreSwift.framework */,
 				CE6DC5F32054362000E20217 /* FreSwift.framework */,
 				CE6DC59F20542D2800E20217 /* Adobe AIR */,
@@ -316,7 +316,7 @@
 		CE87F45D1FB259C9005CF7DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Tua Rua Ltd";
 				TargetAttributes = {
 					CE6DC5A520542D5600E20217 = {
@@ -337,7 +337,7 @@
 				};
 			};
 			buildConfigurationList = CE87F4601FB259C9005CF7DF /* Build configuration list for PBXProject "SpotlightANE" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -472,13 +472,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = x86_64;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.2.0;
+				CURRENT_PROJECT_VERSION = 1.6.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -486,7 +487,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/eoinlandy/SDKs/AIRSDK_30/runtimes/air/mac,
+					/Users/eoinlandy/SDKs/AIRSDK_32/runtimes/air/mac,
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
@@ -499,8 +500,8 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_30/runtimes/air/mac;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_32/runtimes/air/mac;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					"\"Adobe AIR\"",
@@ -521,13 +522,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = x86_64;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.2.0;
+				CURRENT_PROJECT_VERSION = 1.6.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -535,7 +537,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/eoinlandy/SDKs/AIRSDK_30/runtimes/air/mac,
+					/Users/eoinlandy/SDKs/AIRSDK_32/runtimes/air/mac,
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
@@ -548,8 +550,8 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_30/runtimes/air/mac;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				LIBRARY_SEARCH_PATHS = /Users/eoinlandy/SDKs/AIRSDK_32/runtimes/air/mac;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					"\"Adobe AIR\"",
@@ -619,6 +621,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -674,6 +677,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -769,7 +773,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuarua.SpotlightANE;
 				PRODUCT_NAME = SpotlightANE_FW;
@@ -814,7 +818,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuarua.SpotlightANE;
 				PRODUCT_NAME = SpotlightANE_FW;
