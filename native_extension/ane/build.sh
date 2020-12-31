@@ -117,6 +117,15 @@ fi
 if [ -f "$FWPATH/libswiftXPC.dylib" ]; then
 rm "$FWPATH/libswiftXPC.dylib"
 fi
+if [ -f "$FWPATH/libswiftCloudKit.dylib" ]; then
+rm "$FWPATH/libswiftCloudKit.dylib"
+fi
+if [ -f "$FWPATH/libswiftContacts.dylib" ]; then
+rm "$FWPATH/libswiftContacts.dylib"
+fi
+if [ -f "$FWPATH/libswiftCoreLocation.dylib" ]; then
+rm "$FWPATH/libswiftCoreLocation.dylib"
+fi
 
 #Copy native libraries into place.
 echo "Copying native libraries into place."
@@ -142,7 +151,7 @@ echo "Copying Swift dylibs into place for device."
 #Device
 if [ -e "$pathtome/platforms/ios/device/Frameworks/$PROJECTNAME$fwSuffix.framework/Frameworks" ]
 then
-for dylib in "$pathtome/platforms/ios/device/Frameworks/$PROJECTNAME$fwSuffix.framework/Frameworks/*"
+for dylib in "$pathtome"/platforms/ios/device/Frameworks/"$PROJECTNAME""$fwSuffix".framework/Frameworks/*
 do
 mv -f $dylib "$pathtome/../../example-mobile/ios_dependencies/device/Frameworks"
 done
@@ -153,7 +162,7 @@ echo "Copying Swift dylibs into place for simulator."
 #Simulator
 if [ -e "$pathtome/platforms/ios/simulator/Frameworks/$PROJECTNAME$fwSuffix.framework/Frameworks" ]
 then
-for dylib in "$pathtome/platforms/ios/simulator/Frameworks/$PROJECTNAME$fwSuffix.framework/Frameworks/*"
+for dylib in "$pathtome"/platforms/ios/simulator/Frameworks/"$PROJECTNAME""$fwSuffix".framework/Frameworks/*
 do
 mv -f $dylib "$pathtome/../../example-mobile/ios_dependencies/simulator/Frameworks"
 done
